@@ -2,9 +2,6 @@
 
 ## Todo:
 - SparseMatrix
-  * Insert
-  * getRow/Column
-  * getValue
   * print
   * transpose
   * product
@@ -14,6 +11,9 @@
 ## Done:
 - SparseMatrix
   * constructor
+  * Insert
+  * getRow/Column
+  * getValue
 - MatrixRow
   * insert
   * get

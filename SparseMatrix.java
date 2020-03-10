@@ -40,19 +40,39 @@ public class SparseMatrix {
     }
 
     public void insert(int row, int column, int value) {
+        ValueNode newNode = new ValueNode(row, column, value);
 
+        MatrixRow newRow = getRow(row);
+        MatrixColumn newCol = getColumn(column);
+
+        newRow.insert(newNode);
+        newCol.insert(newNode);
     }
 
     public MatrixRow getRow(int position) {
-        return null;
+        MatrixRow p = this.firstRow;
+        for (int i=1; i<position; i++) {
+            p = p.getNext();
+        }
+        return p;
     }
 
     public MatrixColumn getColumn(int position) {
-        return null;
+        MatrixColumn p = this.firstColumn;
+        for (int i=1; i<position; i++) {
+            p = p.getNext();
+        }
+        return p;
     }
 
     public int getValue(int row, int column) {
-        return 0;
+        int val1 = getRow(row).get(column);
+        int val2 = getColumn(column).get(row);
+        if (val1==val2) {
+            return val1;
+        } else {
+            return -69;
+        }
     }
 
     public void print() {
