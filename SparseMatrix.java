@@ -96,6 +96,30 @@ public class SparseMatrix {
     }
 
     public SparseMatrix produce(SparseMatrix other) {
-        return null;
+        SparseMatrix mProd = new SparseMatrix(this.getTotalRows(), other.getTotalColumns() );
+        if (this.getTotalColumns() == other.getTotalRows() ) {
+            for (int i=1; i<=mProd.totalRows; i++) {
+                for (int j=1; j<=mProd.totalRows; j++) {
+                    int nVal = 0;
+                    for (int k=0; k<=this.getTotalColumns(); k++) {
+                        nVal += this.getValue(i,k) * other.getValue(k,j);
+                    }
+                    if (nVal != 0) {
+                        mProd.insert(i,j,nVal);
+                    }
+                }
+            }
+        } else {
+            System.out.println("Mismatched matrices, make sure matrices are compatible before mutltiplying");
+        }
+        return mProd;
+    }
+
+    public int getTotalRows() {
+        return this.totalRows;
+    }
+
+    public int getTotalColumns() {
+        return this.totalColumns;
     }
 }

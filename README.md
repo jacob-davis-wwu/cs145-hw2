@@ -1,8 +1,6 @@
 # cs145-hw2
 
 ## Todo:
-- SparseMatrix
-  * product
 - MatrixReader
   * read
 
@@ -14,6 +12,7 @@
   * getValue
   * print
   * transpose
+  * produce
 - MatrixRow
   * insert
   * get
