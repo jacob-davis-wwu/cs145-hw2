@@ -2,7 +2,6 @@
 
 ## Todo:
 - SparseMatrix
-  * transpose
   * product
 - MatrixReader
   * read
@@ -14,6 +13,7 @@
   * getRow/Column
   * getValue
   * print
+  * transpose
 - MatrixRow
   * insert
   * get

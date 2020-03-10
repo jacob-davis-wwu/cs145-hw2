@@ -83,7 +83,16 @@ public class SparseMatrix {
     }
 
     public SparseMatrix transpose() {
-        return null;
+        SparseMatrix tMat = new SparseMatrix(totalColumns, totalRows);
+        for (int i=1; i<=totalRows; i++) {
+            for (int j=1; j<=totalColumns; j++) {
+                int val = this.getValue(i,j);
+                if (val != 0) {
+                    tMat.insert(j,i,val);
+                }
+            }
+        }
+        return tMat;
     }
 
     public SparseMatrix produce(SparseMatrix other) {
