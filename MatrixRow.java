@@ -46,7 +46,7 @@ public class MatrixRow {
     public int get(int position) {
         ValueNode value = this.first;
         while (value != null) {
-            if (value.getColumn() != position) {
+            if (value.getColumn() == position) {
                 return value.getValue();
             }
             value = value.getNextColumn();

@@ -17,7 +17,7 @@ public class SparseMatrix {
         firstRow = new MatrixRow();
 
         MatrixRow tempRow = firstRow;
-        for (int i=1;i>rows;i++) {
+        for (int i=1;i<rows;i++) {
             MatrixRow nextRow = new MatrixRow();
             tempRow.setNext(nextRow);
             tempRow = nextRow;
@@ -30,7 +30,7 @@ public class SparseMatrix {
         firstColumn = new MatrixColumn();
 
         MatrixColumn tempColumn = firstColumn;
-        for (int i=1;i>cols;i++) {
+        for (int i=1;i<cols;i++) {
             MatrixColumn nextColumn = new MatrixColumn();
             tempColumn.setNext(nextColumn);
             tempColumn = nextColumn;
@@ -67,14 +67,7 @@ public class SparseMatrix {
 
     public int getValue(int row, int column) {
         int val1 = getRow(row).get(column);
-        int val2 = getColumn(column).get(row);
-        if (val1==val2) {
-            return val1;
-        } else {
-            // This shouldn't happen
-            System.out.println("Uh-oh pardner!");
-            return -69;
-        }
+        return val1;
     }
 
     public void print() {
@@ -82,6 +75,7 @@ public class SparseMatrix {
             String printStr = "| ";
             for (int j=1; j<=totalColumns; j++) {
                 printStr = printStr + getValue(i,j) + " ";
+                // printStr = printStr + i + "," + j + " ";
             }
             printStr = printStr + "|";
             System.out.println(printStr);
