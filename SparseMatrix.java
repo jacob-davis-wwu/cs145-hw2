@@ -71,12 +71,21 @@ public class SparseMatrix {
         if (val1==val2) {
             return val1;
         } else {
+            // This shouldn't happen
+            System.out.println("Uh-oh pardner!");
             return -69;
         }
     }
 
     public void print() {
-
+        for (int i=1; i<=totalRows; i++) {
+            String printStr = "| ";
+            for (int j=1; j<=totalColumns; j++) {
+                printStr = printStr + getValue(i,j) + " ";
+            }
+            printStr = printStr + "|";
+            System.out.println(printStr);
+        }
     }
 
     public SparseMatrix transpose() {
