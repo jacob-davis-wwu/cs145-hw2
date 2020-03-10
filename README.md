@@ -2,7 +2,20 @@
 
 ## Todo:
 - SparseMatrix
+  * constructor
+  * Insert
+  * getRow/Column
+  * getValue
+  * print
+  * transpose
+  * product
 - MatrixReader
+  * read
 
 ## Done:
-- get and insert methods for MatrixRow and MatrixColumn
+- MatrixRow
+  * insert
+  * get
+- MatrixColumn
+  * insert
+  * get
