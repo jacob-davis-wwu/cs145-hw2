@@ -2,7 +2,6 @@
 
 ## Todo:
 - SparseMatrix
-  * constructor
   * Insert
   * getRow/Column
   * getValue
@@ -13,6 +12,8 @@
   * read
 
 ## Done:
+- SparseMatrix
+  * constructor
 - MatrixRow
   * insert
   * get

@@ -2,10 +2,6 @@ public class MatrixRow {
     private ValueNode first;
     private MatrixRow next;
 
-    public MatrixRow(ValueNode firstIn) {
-        this.first = firstIn;
-        this.next = null;
-    }
 
     public ValueNode getFirst() {
         return first;
