@@ -52,7 +52,9 @@ public class SparseMatrix {
     public MatrixRow getRow(int position) {
         MatrixRow p = this.firstRow;
         for (int i=1; i<position; i++) {
-            p = p.getNext();
+            if (p.getNext() != null) {
+                p = p.getNext();
+            }
         }
         return p;
     }
@@ -60,7 +62,9 @@ public class SparseMatrix {
     public MatrixColumn getColumn(int position) {
         MatrixColumn p = this.firstColumn;
         for (int i=1; i<position; i++) {
-            p = p.getNext();
+            if (p.getNext() != null) {
+                p = p.getNext();
+            }
         }
         return p;
     }

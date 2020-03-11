@@ -33,6 +33,9 @@ public class MatrixReader {
         catch (FileNotFoundException e) {
             System.out.println("File not found, please try again.");
         }
+        catch (NumberFormatException e) {
+            System.out.println("Matrix could not be read. Please double check the format of your file and try again.");
+        }
         return null;
     }
 }

@@ -1,9 +1,10 @@
 # cs145-hw2
 
 ## Todo:
-- Check error handlin:
+Nothing! It's all done!
 
 ## Done:
+- Check error handling
 - run
   * write main program sequence
 - SparseMatrix
