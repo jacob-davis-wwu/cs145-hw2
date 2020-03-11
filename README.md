@@ -1,10 +1,11 @@
 # cs145-hw2
 
 ## Todo:
-- run
-  * write main program sequence
+- Check error handlin:
 
 ## Done:
+- run
+  * write main program sequence
 - SparseMatrix
   * constructor
   * Insert
