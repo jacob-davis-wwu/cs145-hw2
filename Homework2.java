@@ -2,16 +2,12 @@
 public class Homework2 {
     public void run() {
         MatrixReader reader = new MatrixReader();
-        SparseMatrix mIn = reader.read("matrixB.txt");
-        mIn.print();
-        // SparseMatrix mA = new SparseMatrix(2,2);
-        // mA.insert(1,1,1);
-        // mA.insert(1,2,2);
-        // mA.insert(2,1,3);
-        // mA.insert(2,2,4);
-        // SparseMatrix mB = mA.transpose();
-        // mA.print();
-        // mA.produce(mB).print();
-        // mA.produce(mA).print();
+        SparseMatrix mA = reader.read("matrixA.txt");
+        mA.print();
+        SparseMatrix mB = reader.read("matrixB.txt");
+        mB.print();
+        mA.transpose().print();
+        mB.transpose().print();
+        mA.produce(mB).print();
     }
 }

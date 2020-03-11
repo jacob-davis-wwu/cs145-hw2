@@ -75,11 +75,11 @@ public class SparseMatrix {
             String printStr = "|\t";
             for (int j=1; j<=totalColumns; j++) {
                 printStr = printStr + getValue(i,j) + "\t";
-                // printStr = printStr + i + "," + j + " ";
             }
             printStr = printStr + "|";
             System.out.println(printStr);
         }
+        System.out.println();
     }
 
     public SparseMatrix transpose() {
