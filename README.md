@@ -1,8 +1,8 @@
 # cs145-hw2
 
 ## Todo:
-- MatrixReader
-  * read
+- run
+  * write main program sequence
 
 ## Done:
 - SparseMatrix
@@ -19,3 +19,5 @@
 - MatrixColumn
   * insert
   * get
+- MatrixReader
+  * read

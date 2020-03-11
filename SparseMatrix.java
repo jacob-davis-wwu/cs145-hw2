@@ -72,9 +72,9 @@ public class SparseMatrix {
 
     public void print() {
         for (int i=1; i<=totalRows; i++) {
-            String printStr = "| ";
+            String printStr = "|\t";
             for (int j=1; j<=totalColumns; j++) {
-                printStr = printStr + getValue(i,j) + " ";
+                printStr = printStr + getValue(i,j) + "\t";
                 // printStr = printStr + i + "," + j + " ";
             }
             printStr = printStr + "|";
